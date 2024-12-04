@@ -1,4 +1,5 @@
 trigger: none
+test: "SampleMS"
 pr:
   branches:
     include:

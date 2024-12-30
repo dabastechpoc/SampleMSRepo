@@ -1,6 +1,14 @@
-trigger: none
-test: "SampleMS"
-pr:
+trigger:
   branches:
     include:
-    - '*'
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+  - job: BuildAndDeploy
+    steps:
+        - script: |
+           echo "Validating PR"
+           displayName: 'Run validation'
